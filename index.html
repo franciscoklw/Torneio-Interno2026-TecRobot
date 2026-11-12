@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Torneio Interno de Robótica 2026</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="topo">
+    <div class="topo-conteudo">
+        <span class="marca">TECROBOT#9166</span>
+        </div>
+    </header>
+    <h1>Torneio Interno de Robótica 2026</h1>
+
+    <nav>
+        <a href="#" data-secao="cronograma">Cronograma</a>
+        <a href="#" data-secao="ranking">Ranking</a>
+        <a href="#" data-secao="eliminatorias">Chaveamento</a>
+        <a href="#" data-secao="podio">Pódio</a>
+    </nav>
+
+
+    <!-- =========================
+         CRONOGRAMA
+    ========================== -->
+
+    <section id="cronograma">
+
+        <h2>Cronogramas</h2>
+
+        <h3>Seguidor de Linha</h3>
+
+        <div class="tabela-card">
+
+            <table>
+
+                <tr>
+                    <th>Horário</th>
+                    <th>Equipe</th>
+                    <th>Status</th>
+                </tr>
+
+                <tr>
+                    <td>08:00</td>
+                    <td>CoalaBots</td>
+                    <td>A receber</td>
+                </tr>
+
+                <tr>
+                    <td>08:15</td>
+                    <td>GuardiõesBots</td>
+                    <td>A receber</td>
+                </tr>
+
+            </table>
+
+        </div>
+
+
+        <h3>Desafio Surpresa</h3>
+
+        <div class="tabela-card">
+
+            <table>
+
+                <tr>
+                    <th>Horário</th>
+                    <th>Rodada</th>
+                </tr>
+
+                <tr>
+                    <td>08:00</td>
+                    <td>Rodada 1</td>
+                </tr>
+
+                <tr>
+                    <td>08:15</td>
+                    <td>Rodada 2</td>
+                </tr>
+
+                <tr>
+                    <td>08:30</td>
+                    <td>Rodada 3</td>
+                </tr>
+
+            </table>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         RANKING
+    ========================== -->
+
+    <section id="ranking">
+
+        <h2>Ranking</h2>
+
+        <div class="ranking-card">
+
+            <label for="modalidade">
+                Selecione a modalidade:
+            </label>
+
+            <select id="modalidade">
+
+                <option value="linha">
+                    Seguidor de Linha
+                </option>
+
+                <option value="balao">
+                    Desafio Surpresa
+                </option>
+
+            </select>
+
+
+            <!-- RANKING LINHA -->
+
+
+<!-- RANKING LINHA -->
+
+<div id="ranking-linha">
+
+    <table>
+
+        <tr>
+            <th>Posição</th>
+            <th>Equipe</th>
+            <th>Pontos</th>
+            <th>Tempo</th>
+        </tr>
+
+        <tr>
+            <td>1</td>
+            <td id="linha-equipe-1">--</td>
+            <td id="linha-pontos-1">--</td>
+            <td id="linha-tempo-1">--</td>
+        </tr>
+
+        <tr>
+            <td>2</td>
+            <td id="linha-equipe-2">--</td>
+            <td id="linha-pontos-2">--</td>
+            <td id="linha-tempo-2">--</td>
+        </tr>
+
+        <tr>
+            <td>3</td>
+            <td id="linha-equipe-3">--</td>
+            <td id="linha-pontos-3">--</td>
+            <td id="linha-tempo-3">--</td>
+        </tr>
+
+        <tr>
+            <td>4</td>
+            <td id="linha-equipe-4">--</td>
+            <td id="linha-pontos-4">--</td>
+            <td id="linha-tempo-4">--</td>
+        </tr>
+
+        <tr>
+            <td>5</td>
+            <td id="linha-equipe-5">--</td>
+            <td id="linha-pontos-5">--</td>
+            <td id="linha-tempo-5">--</td>
+        </tr>
+
+    </table>
+
+</div>
+
+
+            <!-- RANKING BALÃO -->
+
+            <div id="ranking-balao">
+
+                <table>
+
+                    <tr>
+                        <th>Posição</th>
+                        <th>Equipe</th>
+                        <th>Pontos</th>
+                    </tr>
+
+                    <tr>
+                        <td>1</td>
+                        <td id="balao-equipe-1">--</td>
+                        <td id="balao-pontos-1">--</td>
+                    </tr>
+
+                    <tr>
+                        <td>2</td>
+                        <td id="balao-equipe-2">--</td>
+                        <td id="balao-pontos-2">--</td>
+                    </tr>
+
+                    <tr>
+                        <td>3</td>
+                        <td id="balao-equipe-3">--</td>
+                        <td id="balao-pontos-3">--</td>
+                    </tr>
+
+                    <tr>
+                        <td>4</td>
+                        <td id="balao-equipe-4">--</td>
+                        <td id="balao-pontos-4">--</td>
+                    </tr>
+
+                    <tr>
+                        <td>5</td>
+                        <td id="balao-equipe-5">--</td>
+                        <td id="balao-pontos-5">--</td>
+                    </tr>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+<!-- =========================
+     CHAVEAMENTO
+========================== -->
+
+<section id="eliminatorias">
+
+    <h2>Chaveamento</h2>
+
+    <div class="chaveamento">
+
+        <!-- SEMIFINAL 1 -->
+
+        <div class="partida-card semifinal1">
+
+            <h3>SEMIFINAL 1</h3>
+
+            <p id="semifinal1-equipe1">
+                Aguardando
+            </p>
+
+            <p>VS</p>
+
+            <p id="semifinal1-equipe2">
+                Aguardando
+            </p>
+
+        </div>
+
+
+        <!-- LINHA SEMIFINAL 1 → FINAL -->
+
+        <div class="linha linha-sf1-final"></div>
+
+
+        <!-- LINHA PERDEDOR SF1 → 3º -->
+
+        <div class="linha linha-sf1-terceiro"></div>
+
+
+        <!-- SEMIFINAL 2 -->
+
+        <div class="partida-card semifinal2">
+
+            <h3>SEMIFINAL 2</h3>
+
+            <p id="semifinal2-equipe1">
+                Aguardando
+            </p>
+
+            <p>VS</p>
+
+            <p id="semifinal2-equipe2">
+                Aguardando
+            </p>
+
+        </div>
+
+
+        <!-- LINHA SEMIFINAL 2 → FINAL -->
+
+        <div class="linha linha-sf2-final"></div>
+
+
+        <!-- LINHA PERDEDOR SF2 → 3º -->
+
+        <div class="linha linha-sf2-terceiro"></div>
+
+
+        <!-- 3º LUGAR -->
+
+        <div class="partida-card terceiro">
+
+            <h3>DISPUTA DE 3º LUGAR</h3>
+
+            <p id="terceiro-equipe1">
+                Aguardando
+            </p>
+
+            <p>VS</p>
+
+            <p id="terceiro-equipe2">
+                Aguardando
+            </p>
+
+        </div>
+
+
+        <!-- FINAL -->
+
+        <div class="partida-card final">
+
+            <h3>FINAL</h3>
+
+            <p id="final-equipe1">
+                Aguardando
+            </p>
+
+            <p>VS</p>
+
+            <p id="final-equipe2">
+                Aguardando
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+    <!-- =========================
+     PÓDIO
+========================== -->
+
+<section id="podio">
+
+    <div class="podio">
+
+        <div class="podio-titulo">
+            <span>RESULTADO DO TORNEIO</span>
+            <h2>Pódio</h2>
+            <p>Classificação final do Desafio do Surpresa</p>
+        </div>
+
+        <div class="podio-grid">
+
+            <div class="podio-card segundo">
+                <div class="podio-posicao">2º</div>
+                <strong id="podio-segundo">
+                    Aguardando
+                </strong>
+                <small>VICE-CAMPEÃO</small>
+            </div>
+
+            <div class="podio-card primeiro">
+                <div class="podio-posicao">1º</div>
+                <strong id="podio-primeiro">
+                    Aguardando
+                </strong>
+                <small>CAMPEÃO</small>
+            </div>
+
+            <div class="podio-card terceiro">
+                <div class="podio-posicao">3º</div>
+                <strong id="podio-terceiro">
+                    Aguardando
+                </strong>
+                <small>TERCEIRO LUGAR</small>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

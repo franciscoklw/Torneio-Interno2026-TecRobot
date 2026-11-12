@@ -1,0 +1,1186 @@
+/* =========================================================
+   TECROBOT #9166 — TORNEIO INTERNO 2026
+   Identidade visual do site público
+========================================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    /* IDENTIDADE TECROBOT */
+
+    --roxo: #5b2490;
+    --roxo-escuro: #2d123f;
+    --roxo-profundo: #1d0d2b;
+    --roxo-medio: #7135a6;
+    --roxo-claro: #f1eafa;
+
+    --amarelo: #e7b83f;
+    --amarelo-claro: #fff7df;
+
+    --fundo: #f5f3f7;
+    --superficie: #ffffff;
+    --superficie-suave: #faf8fc;
+
+    --texto: #241b2d;
+    --texto-secundario: #716879;
+    --borda: #e8e2ed;
+
+    --preto: #17121c;
+
+    --verde: #16794b;
+    --verde-fundo: #eaf7ef;
+    --cinza-fundo: #f0eef2;
+
+    --raio-card: 15px;
+    --sombra-card: 0 5px 18px rgba(37, 18, 55, 0.055);
+    --largura-conteudo: 1120px;
+
+   }
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: var(--fundo);
+    color: var(--texto);
+    font-family: "Poppins", "Nunito", sans-serif;
+    font-size: 14px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* =========================
+   CABEÇALHO / IDENTIDADE
+========================= */
+
+.topo {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+
+    width: 100%;
+    min-height: 48px;
+
+    background: linear-gradient(
+        105deg,
+        var(--roxo-profundo),
+        var(--roxo-escuro) 62%,
+        #3b1756
+    );
+
+    border-bottom: 1px solid rgba(231, 184, 63, 0.38);
+}
+
+.topo::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+
+    top: -42px;
+    right: 3%;
+
+    width: 260px;
+    height: 150px;
+
+    background-image:
+        linear-gradient(
+            rgba(45, 18, 63, 0.18),
+            rgba(45, 18, 63, 0.18)
+        ),
+        var(--foto-onca);
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 46%;
+
+    clip-path: polygon(
+        17% 0,
+        100% 0,
+        100% 100%,
+        0 100%
+    );
+
+    opacity: 0.88;
+    transform: rotate(-8deg);
+    pointer-events: none;
+}
+
+.topo-conteudo {
+    position: relative;
+    z-index: 1;
+
+    display: flex;
+    align-items: center;
+
+    width: min(92%, var(--largura-conteudo));
+    min-height: 48px;
+
+    margin: 0 auto;
+    padding: 10px 0;
+}
+
+.marca {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    color: #f4d276;
+
+    font-family: "Barlow Semi Condensed", "Poppins", sans-serif;
+    font-size: 15px;
+    font-weight: 800;
+    letter-spacing: 1.35px;
+}
+
+.marca::before {
+    content: "";
+
+    width: 8px;
+    height: 8px;
+
+    border-radius: 2px;
+
+    background: var(--amarelo);
+    box-shadow: 0 0 0 4px rgba(231, 184, 63, 0.13);
+
+    transform: rotate(45deg);
+}
+
+/* TÍTULO PRINCIPAL */
+
+h1 {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+
+    margin: 0;
+    padding: 30px 20px 32px;
+
+    background:
+        linear-gradient(
+            105deg,
+            rgba(45, 18, 63, 0.98),
+            rgba(66, 27, 94, 0.96) 62%,
+            rgba(45, 18, 63, 0.98)
+        );
+
+    color: #fff;
+    text-align: center;
+
+    font-family: "Barlow Semi Condensed", "Poppins", sans-serif;
+    font-size: clamp(29px, 3.5vw, 39px);
+    font-weight: 800;
+    letter-spacing: -0.45px;
+    line-height: 1.12;
+}
+
+h1::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+
+    top: -28px;
+    right: max(3%, calc((100% - var(--largura-conteudo)) / 2));
+
+    width: 235px;
+    height: 155px;
+
+    background-image:
+        linear-gradient(
+            rgba(45, 18, 63, 0.20),
+            rgba(45, 18, 63, 0.20)
+        ),
+        var(--foto-onca);
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 54%;
+
+    clip-path: polygon(
+        18% 0,
+        100% 0,
+        100% 100%,
+        0 100%
+    );
+
+    opacity: 0.82;
+    transform: rotate(5deg);
+    pointer-events: none;
+}
+
+/* =========================
+   NAVEGAÇÃO
+========================= */
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 30px;
+
+    width: 100%;
+    padding: 0 16px;
+
+    background: #251032;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+    box-shadow: 0 5px 16px rgba(24, 10, 34, 0.12);
+}
+
+nav a {
+    position: relative;
+
+    display: inline-flex;
+    align-items: center;
+
+    min-height: 48px;
+    padding: 12px 4px;
+
+    color: #c5b8ce;
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.1px;
+
+    transition: color 0.18s ease;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+
+    left: 0;
+    bottom: -1px;
+
+    width: 100%;
+    height: 3px;
+
+    border-radius: 3px 3px 0 0;
+    background: var(--amarelo);
+
+    transform: scaleX(0);
+    transform-origin: center;
+
+    transition: transform 0.18s ease;
+}
+
+nav a:hover,
+nav a.ativa {
+    color: #fff;
+}
+
+nav a:hover::after,
+nav a.ativa::after {
+    transform: scaleX(1);
+}
+
+/* =========================
+   ÁREA PRINCIPAL / TÍTULOS
+========================= */
+
+section {
+    width: min(92%, var(--largura-conteudo));
+
+    margin: 0 auto;
+    padding: 10px 0 34px;
+}
+
+h2 {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+
+    margin: 30px 0 19px;
+
+    color: var(--roxo-escuro);
+
+    font-family: "Barlow Semi Condensed", "Poppins", sans-serif;
+    font-size: 29px;
+    font-weight: 800;
+    letter-spacing: -0.2px;
+    line-height: 1.15;
+}
+
+h2::before {
+    content: "";
+
+    flex: 0 0 5px;
+
+    width: 5px;
+    height: 25px;
+
+    border-radius: 3px;
+
+    background-image: var(--foto-onca);
+    background-size: cover;
+    background-position: center;
+}
+
+h3 {
+    margin: 24px 0 11px;
+
+    color: #39234b;
+
+    font-family: "Barlow Semi Condensed", "Poppins", sans-serif;
+    font-size: 19px;
+    font-weight: 700;
+    letter-spacing: 0.05px;
+}
+
+/* =========================
+   CRONOGRAMA / TABELAS
+========================= */
+
+.tabela-card {
+    width: 100%;
+    margin-bottom: 24px;
+
+    overflow: hidden;
+
+    background: var(--superficie);
+
+    border: 1px solid var(--borda);
+    border-top: 3px solid var(--roxo);
+    border-radius: var(--raio-card);
+
+    box-shadow: var(--sombra-card);
+}
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+th,
+td {
+    padding: 13px 17px;
+    border-bottom: 1px solid #eee9f2;
+}
+
+th {
+    background: #3b1a55;
+    color: #fff;
+
+    text-align: left;
+
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.55px;
+    text-transform: uppercase;
+}
+
+td {
+    background: var(--superficie);
+    color: #362d3d;
+
+    font-size: 13px;
+    font-weight: 500;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+th:first-child,
+td:first-child {
+    text-align: center;
+}
+
+th:last-child,
+td:last-child {
+    text-align: center;
+}
+
+tbody tr:hover td,
+.tabela-card tr:hover td {
+    background: #f8f4fc;
+}
+
+/* Horários */
+
+.tabela-card td:first-child {
+    color: var(--roxo);
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+}
+
+/* =========================
+   RANKING
+========================= */
+
+.ranking-card {
+    width: 100%;
+    margin: 0 auto;
+    padding: 21px;
+
+    background: var(--superficie);
+
+    border: 1px solid var(--borda);
+    border-top: 3px solid var(--roxo);
+    border-radius: var(--raio-card);
+
+    box-shadow: var(--sombra-card);
+}
+
+label {
+    display: inline-block;
+
+    margin: 0 10px 10px 0;
+
+    color: #493a53;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+select {
+    min-width: 220px;
+    max-width: 100%;
+
+    padding: 10px 38px 10px 13px;
+
+    border: 1px solid #d8cbe3;
+    border-radius: 9px;
+
+    background-color: #fff;
+    color: var(--roxo-escuro);
+
+    font-family: "Poppins", sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+
+    outline: none;
+    cursor: pointer;
+
+    transition:
+        border-color 0.18s ease,
+        box-shadow 0.18s ease;
+}
+
+select:focus {
+    border-color: var(--roxo);
+
+    box-shadow: 0 0 0 3px rgba(91, 36, 144, 0.13);
+}
+
+#ranking-linha,
+#ranking-balao {
+    margin-top: 19px;
+
+    overflow-x: auto;
+
+    border: 1px solid #eee9f2;
+    border-radius: 11px;
+}
+
+#ranking-balao {
+    display: none;
+}
+
+.ranking-card table th {
+    background: #4b216c;
+}
+
+.ranking-card table td {
+    padding-top: 14px;
+    padding-bottom: 14px;
+}
+
+.ranking-card table tr:nth-child(2) td {
+    background: #fff9e9;
+    font-weight: 700;
+}
+
+.ranking-card table tr:nth-child(2) td:first-child {
+    color: #805c08;
+}
+
+.ranking-card table tr:hover td {
+    background: #f8f4fc;
+}
+
+.ranking-card table tr:nth-child(2):hover td {
+    background: #fff4d7;
+}
+
+#ranking-linha table {
+    min-width: 560px;
+}
+
+#ranking-balao table {
+    min-width: 390px;
+}
+
+/* =========================
+   CHAVEAMENTO
+========================= */
+
+.chaveamento {
+    --largura-final: 240px;
+    --meia-largura-final: 120px;
+    --espaco-colunas: clamp(40px, 10vw, 140px);
+    --espaco-linhas: 70px;
+    --centro-superior: 90px;
+    --centro-inferior: 340px;
+
+    position: relative;
+    isolation: isolate;
+
+    width: 100%;
+    height: 430px;
+    min-height: 430px;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        var(--largura-final)
+        minmax(0, 1fr);
+
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+
+    column-gap: var(--espaco-colunas);
+    row-gap: var(--espaco-linhas);
+
+    align-items: center;
+    margin: 30px 0 45px;
+}
+
+/* =========================
+   CARDS DAS PARTIDAS
+========================= */
+
+.partida-card {
+    position: relative;
+    align-self: center;
+
+    width: 100%;
+    overflow: hidden;
+
+    background: var(--superficie);
+
+    border: 1px solid var(--borda);
+    border-radius: 13px;
+
+    box-shadow: 0 5px 16px rgba(37, 18, 55, 0.07);
+
+    text-align: center;
+    z-index: 2;
+}
+
+.partida-card h3 {
+    margin: 0;
+    padding: 11px 12px;
+
+    background: #4c216b;
+    color: #fff;
+
+    font-family: "Barlow Semi Condensed", "Poppins", sans-serif;
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 0.7px;
+}
+
+.partida-card p {
+    margin: 0;
+    padding: 12px 10px;
+
+    border-bottom: 1px solid #eee9f2;
+
+    color: #2c2333;
+    font-size: 14px;
+    font-weight: 650;
+}
+
+.partida-card p:last-child {
+    border-bottom: none;
+}
+
+/* VS */
+
+.partida-card p:nth-of-type(2) {
+    padding: 5px;
+
+    background: #f7f5f9;
+    color: #92899a;
+
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.7px;
+}
+
+/* Posicionamento restrito ao chaveamento */
+
+.chaveamento .semifinal1 {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.chaveamento .semifinal2 {
+    grid-column: 3;
+    grid-row: 1;
+}
+
+.chaveamento .final {
+    grid-column: 2;
+    grid-row: 1;
+
+    border: 2px solid var(--amarelo);
+}
+
+.chaveamento .terceiro {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.chaveamento .final h3 {
+    background: var(--amarelo);
+    color: #2b1b08;
+}
+
+/* =========================
+   CONECTORES DO CHAVEAMENTO
+========================= */
+
+.linha {
+    position: absolute;
+    z-index: 1;
+
+    background: transparent;
+    pointer-events: none;
+}
+
+.linha-sf1-final {
+    left: calc(
+        50% - var(--meia-largura-final) - var(--espaco-colunas)
+    );
+
+    top: var(--centro-superior);
+
+    width: var(--espaco-colunas);
+    height: 2px;
+
+    transform: translateY(-50%);
+    background: var(--roxo);
+}
+
+.linha-sf2-final {
+    right: calc(
+        50% - var(--meia-largura-final) - var(--espaco-colunas)
+    );
+
+    top: var(--centro-superior);
+
+    width: var(--espaco-colunas);
+    height: 2px;
+
+    transform: translateY(-50%);
+    background: var(--roxo);
+}
+
+.linha-sf1-terceiro {
+    left: calc(
+        50% - var(--meia-largura-final) - var(--espaco-colunas)
+    );
+
+    top: 120px;
+    bottom: var(--centro-superior);
+
+    width: var(--espaco-colunas);
+}
+
+.linha-sf1-terceiro::before {
+    content: "";
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 35px;
+    height: 2px;
+
+    background: var(--roxo);
+}
+
+.linha-sf1-terceiro::after {
+    content: "";
+    position: absolute;
+
+    left: 35px;
+    top: 0;
+
+    width: calc(100% - 35px);
+    height: 100%;
+
+    border-left: 2px solid var(--roxo);
+    border-bottom: 2px solid var(--roxo);
+}
+
+.linha-sf2-terceiro {
+    right: calc(
+        50% - var(--meia-largura-final) - var(--espaco-colunas)
+    );
+
+    top: 120px;
+    bottom: var(--centro-superior);
+
+    width: var(--espaco-colunas);
+}
+
+.linha-sf2-terceiro::before {
+    content: "";
+    position: absolute;
+
+    right: 0;
+    top: 0;
+
+    width: 35px;
+    height: 2px;
+
+    background: var(--roxo);
+}
+
+.linha-sf2-terceiro::after {
+    content: "";
+    position: absolute;
+
+    right: 35px;
+    top: 0;
+
+    width: calc(100% - 35px);
+    height: 100%;
+
+    border-right: 2px solid var(--roxo);
+    border-bottom: 2px solid var(--roxo);
+}
+
+/* =========================
+   VENCEDOR / PERDEDOR
+========================= */
+
+.partida-card p.vencedor {
+    color: var(--verde) !important;
+    background: var(--verde-fundo) !important;
+    font-weight: 800 !important;
+    border-left: 4px solid #23945f;
+}
+
+.partida-card p.derrotado {
+    color: #77717d !important;
+    background: var(--cinza-fundo) !important;
+    font-weight: 500 !important;
+    border-left: 4px solid #aaa3af;
+}
+
+/* =========================
+   RESULTADO FINAL
+========================= */
+
+.resultado-final {
+    margin-top: 20px;
+    padding: 18px 20px;
+
+    background: var(--superficie);
+
+    border: 1px solid var(--borda);
+    border-left: 4px solid var(--amarelo);
+    border-radius: 12px;
+
+    box-shadow: var(--sombra-card);
+}
+
+/* =========================
+   PÓDIO
+========================= */
+
+.podio {
+    width: 92%;
+    max-width: 1100px;
+
+    margin: 0 auto;
+    padding: 26px 0 38px;
+}
+
+.podio-titulo {
+    margin-bottom: 26px;
+}
+
+.podio-titulo span {
+    color: var(--roxo);
+
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.65px;
+}
+
+.podio-titulo h2 {
+    margin: 5px 0 6px;
+    color: var(--roxo-escuro);
+    font-size: 30px;
+}
+
+.podio-titulo p {
+    margin: 0;
+    color: var(--texto-secundario);
+    font-size: 13px;
+}
+
+/* Os três lugares ficam lado a lado e compartilham a base. */
+
+.podio-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1.08fr 1fr;
+
+    align-items: end;
+    gap: 12px;
+
+    width: min(100%, 850px);
+    margin: 0 auto;
+    padding: 0 0 10px;
+}
+
+.podio-card {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    min-width: 0;
+    margin: 0;
+    padding: 19px 12px 22px;
+
+    overflow: visible;
+
+    background: var(--superficie);
+
+    border: 1px solid var(--borda);
+    border-radius: 13px 13px 5px 5px;
+
+    text-align: center;
+
+    box-shadow: 0 5px 16px rgba(37, 18, 55, 0.07);
+}
+
+.podio-card.segundo {
+    height: 155px;
+    border-top: 5px solid #9da3ad;
+}
+
+.podio-card.primeiro {
+    height: 205px;
+
+    border: 2px solid var(--amarelo);
+    border-top: 6px solid var(--amarelo);
+
+    box-shadow: 0 8px 22px rgba(37, 18, 55, 0.1);
+}
+
+.podio-card.terceiro {
+    height: 125px;
+    border-top: 5px solid #b7791f;
+}
+
+.podio-card .podio-posicao {
+    margin-bottom: 10px;
+
+    color: #6b7280;
+
+    font-family: "Barlow Semi Condensed", "Poppins", sans-serif;
+    font-size: 29px;
+    font-weight: 800;
+    line-height: 1.1;
+}
+
+.podio-card.primeiro .podio-posicao {
+    color: #a87800;
+}
+
+.podio-card.terceiro .podio-posicao {
+    color: #a16207;
+}
+
+.podio-card strong {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+
+    color: var(--texto);
+
+    font-size: 17px;
+    font-weight: 800;
+    line-height: 1.25;
+}
+
+.podio-card.primeiro strong {
+    color: var(--roxo);
+    font-size: 20px;
+}
+
+.podio-card small {
+    margin-top: 7px;
+
+    color: var(--texto-secundario);
+
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 0.75px;
+}
+
+.podio-card.primeiro small {
+    color: #946c12;
+}
+
+/* Base inferior */
+
+.podio-card.segundo::after,
+.podio-card.primeiro::after,
+.podio-card.terceiro::after {
+    content: "";
+    position: absolute;
+
+    left: -1px;
+    right: -1px;
+    bottom: -9px;
+
+    height: 9px;
+
+    border-radius: 0 0 5px 5px;
+
+    background: #d9d6dc;
+}
+
+.podio-card.primeiro::after {
+    background: var(--amarelo);
+}
+
+.podio-card.terceiro::after {
+    background: #d6a35d;
+}
+
+/* =========================
+   TABLETS
+========================= */
+
+@media (max-width: 850px) {
+
+    .chaveamento {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+
+        gap: 18px;
+
+        height: auto;
+        min-height: 0;
+    }
+
+    .chaveamento .linha {
+        display: none;
+    }
+
+    .chaveamento .partida-card {
+        width: 100%;
+        align-self: stretch;
+    }
+
+    .chaveamento .semifinal1 {
+        order: 1;
+    }
+
+    .chaveamento .semifinal2 {
+        order: 2;
+    }
+
+    .chaveamento .final {
+        order: 3;
+    }
+
+    .chaveamento .terceiro {
+        order: 4;
+    }
+
+    .podio-grid {
+        width: min(100%, 760px);
+    }
+}
+
+/* =========================
+   CELULARES
+========================= */
+
+@media (max-width: 700px) {
+
+    .topo-conteudo {
+        width: 94%;
+    }
+
+    .topo::after {
+        right: -90px;
+        opacity: 0.16;
+    }
+
+    h1 {
+        padding: 25px 14px 27px;
+        font-size: clamp(25px, 7vw, 32px);
+    }
+
+    h1::after {
+        right: -105px;
+        opacity: 0.16;
+    }
+
+    nav {
+        justify-content: space-around;
+        gap: 6px;
+        padding: 0 8px;
+    }
+
+    nav a {
+        min-height: 45px;
+        padding: 11px 5px;
+        font-size: 12px;
+    }
+
+    section {
+        width: 94%;
+        padding-bottom: 26px;
+    }
+
+    h2 {
+        margin: 25px 0 16px;
+        font-size: 25px;
+    }
+
+    h2::before {
+        height: 22px;
+    }
+
+    h3 {
+        margin-top: 21px;
+        font-size: 18px;
+    }
+
+    .tabela-card {
+        margin-bottom: 20px;
+        border-radius: 12px;
+    }
+
+    th,
+    td {
+        padding: 11px 10px;
+        font-size: 12px;
+    }
+
+    .ranking-card {
+        padding: 14px;
+        border-radius: 12px;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 8px;
+    }
+
+    select {
+        width: 100%;
+        min-width: 0;
+    }
+
+    #ranking-linha,
+    #ranking-balao {
+        margin-top: 15px;
+    }
+
+    .chaveamento {
+        margin: 22px 0 32px;
+    }
+
+    .partida-card h3 {
+        font-size: 13px;
+    }
+
+    .partida-card p {
+        padding: 11px 8px;
+        font-size: 13px;
+    }
+
+    /* Pódio no celular */
+
+    .podio {
+        width: 94%;
+        padding-top: 20px;
+    }
+
+    .podio-grid {
+        grid-template-columns: 1fr;
+        align-items: stretch;
+        gap: 13px;
+        padding-bottom: 8px;
+    }
+
+    .podio-card,
+    .podio-card.segundo,
+    .podio-card.primeiro,
+    .podio-card.terceiro {
+        height: 112px;
+        min-height: 112px;
+        padding: 15px 12px 18px;
+    }
+
+    .podio-card.primeiro {
+        order: -1;
+        height: 132px;
+        min-height: 132px;
+    }
+
+    .podio-card .podio-posicao {
+        margin-bottom: 7px;
+        font-size: 25px;
+    }
+
+    .podio-card strong,
+    .podio-card.primeiro strong {
+        font-size: 17px;
+    }
+
+    .resultado-final {
+        padding: 15px;
+    }
+}
+
+/* =========================
+   TELAS MUITO ESTREITAS
+========================= */
+
+@media (max-width: 380px) {
+
+    nav {
+        gap: 2px;
+    }
+
+    nav a {
+        font-size: 11px;
+        padding-right: 3px;
+        padding-left: 3px;
+    }
+
+    .podio-card strong,
+    .podio-card.primeiro strong {
+        font-size: 15px;
+    }
+}

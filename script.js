@@ -806,31 +806,6 @@ document.getElementById(
 
     );
 
-
-    // =========================
-    // CAMPEÃO
-    // =========================
-
-    document.getElementById(
-        "campeao"
-    ).textContent =
-        nomeEquipe(
-            dados.final_vencedor
-        );
-
-
-    // =========================
-    // 3º COLOCADO
-    // =========================
-
-    document.getElementById(
-        "terceiro-lugar"
-    ).textContent =
-        nomeEquipe(
-            dados.terceiro_vencedor
-        );
-
-
     console.log(
         "Chaveamento:",
         dados

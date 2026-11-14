@@ -496,6 +496,15 @@ async function carregarChaveamento() {
 
     const dados = chaveamento[0];
 
+    if (
+    dados.semifinal1_vencedor === null &&
+    dados.semifinal2_vencedor === null &&
+    dados.final_vencedor === null &&
+    dados.terceiro_vencedor === null
+) {
+    return;
+}
+
 
     // =========================
     // BUSCAR IDs DAS EQUIPES
